@@ -18,3 +18,5 @@ void loop() {
     Serial.println("ตัวอย่างการแสดงค่า string : " + s); 
     delay(10000);
 }
+
+
