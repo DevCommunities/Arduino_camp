@@ -18,8 +18,8 @@
 
 int motor1Pin1 = 19;
 int motor1Pin2 = 18;
-int motor1Pin3 = 23;
-int motor1Pin4 = 22;
+int motor2Pin1 = 23;
+int motor2Pin2 = 22;
 
 // Your WiFi credentials.
 // Set password to "" for open networks.
@@ -57,18 +57,18 @@ BLYNK_WRITE(V1)
     int value = param.asInt();
     if (value == 0)
     {
-        digitalWrite(motor1Pin3, LOW);
-        digitalWrite(motor1Pin4, LOW);
+        digitalWrite(motor2Pin1, LOW);
+        digitalWrite(motor2Pin2, LOW);
     }
     if (value == 1)
     {
-        digitalWrite(motor1Pin3, HIGH);
-        digitalWrite(motor1Pin4, LOW);
+        digitalWrite(motor2Pin1, HIGH);
+        digitalWrite(motor2Pin2, LOW);
     }
     if (value == -1)
     {
-        digitalWrite(motor1Pin3, LOW);
-        digitalWrite(motor1Pin4, HIGH);
+        digitalWrite(motor2Pin1, LOW);
+        digitalWrite(motor2Pin2, HIGH);
     }
     Serial.println("RIGHT:" + String(value));
 }
